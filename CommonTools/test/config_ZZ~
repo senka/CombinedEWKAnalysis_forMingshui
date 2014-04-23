@@ -1,0 +1,16 @@
+[Global]
+par1Name = dk
+par1PlotName = #lambda
+par2Name = lam
+par2PlotName = #Delta g^{Z}
+
+[ch1]
+Nbkg=3
+bkg1_name=zll
+bkg1_shape_syst=
+bkg2_name=topwwwjetsdata
+bkg2_shape_syst=
+bkg3_name=wz3lnu
+bkg3_shape_syst=
+signal_shape_syst=shapeSignal1,shapeSignal2
+

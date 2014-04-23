@@ -1,0 +1,20 @@
+[Global]
+par1Name = dk
+par1PlotName = #lambda
+par2Name = lam
+par2PlotName = #Delta g^{Z}
+
+[ch1]
+Nbkg=2
+bkg1_name=background1
+bkg1_shape_syst=background1_ch1boosted_backshape,background1_ch1xboosted_backshape
+bkg2_name=background2
+bkg2_shape_syst=background2_ch1boosted_backshape,background2_ch1xboosted_backshape
+signal_shape_syst=shapeSignal1,shapeSignal2
+
+[ch2]
+Nbkg=2
+bkg1_name=background1
+bkg1_shape_syst=background1_ch2boosted_backshape
+bkg2_name=background2
+bkg2_shape_syst=background2_ch2boosted_backshape

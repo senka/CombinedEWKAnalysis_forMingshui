@@ -1,0 +1,20 @@
+//	working recipe:
+
+python buildWZworkspace.py --config=config
+python buildWZworkspace.py --config=config_example
+python buildWZworkspace.py --config=config_example2
+rm wv_semil_ch12combined.txt
+
+// not working:
+combineCards.py wv_semil_ch1boosted.txt wv_semil_ch2boosted.txt > wv_semil_ch12combined.txt
+
+// working:
+combineCards.py wv_semil_ch2boosted.txt wv_semil_ch1boosted.txt > wv_semil_ch12combined.txt
+
+text2workspace.py -m 126 wv_semil_ch12combined.txt -o Example_ATGC_WV_ch12_workspace.root -P CombinedEWKAnalysis.CommonTools.HagiwaraAndZeppenfeldTwoDimensionalModel_wz:dkglZModel_wz 
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P dkg -P lZ --floatOtherPOIs=0 --algo=grid --points=10000 --minimizerStrategy=2
+
+
+===========================
+text2workspace.py -m 126 wv_semil_ch12combined.txt -o Example_ATGC_WV_ch12_workspace.root -P CombinedEWKAnalysis.CommonTools.HagiwaraAndZeppenfeldTwoDimensionalModel_wz:dkglZModel_wz --PO poi=dkg,lZ,dg1 --PO range_dkg=-0.1,0.1 --PO range_lZ=-0.1,0.1
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P dkg -P lZ --floatOtherPOIs=0 --algo=grid --points=10000 --minimizerStrategy=2

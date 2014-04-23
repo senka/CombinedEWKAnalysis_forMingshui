@@ -1,0 +1,196 @@
+//	working recipe:
+
+python buildWZworkspace_forZZ_.py --config=config_ZZ
+python buildWZworkspace_forZZ_.py --config=config_ZZ_Zlldata
+python buildWZworkspace_forZZ_.py --config=config_ZZ_Zlldata_withSherpaSyst
+
+python buildWZworkspace_forZZ_.py --config=config_ZZ_Zlldata_onlyStatErr
+python buildWZworkspace_forZZ_.py --config=config_ZZ_Zlldata_noJetScale
+python buildWZworkspace_forZZ_.py --config=config_ZZ_Zlldata_noJetScale_noACCSyst
+python buildWZworkspace_forZZ_.py --config=config_ZZ_Zlldata_noACCSyst
+python buildWZworkspace_forZZ_.py --config=config_ZZ_Zlldata_noACCSyst_withSherpaSyst
+python buildWZworkspace_forZZ_1sigma.py --config=config_ZZ_Zlldata_noACCSyst_withSherpaSyst
+python buildWZworkspace_forZZ_1sigma.py --config=config_ZZ_Zlldata_check1sigmaVS3sigma
+python buildWZworkspace_forZZ_.py --config=config_ZZ_Zlldata_check1sigmaVS3sigma
+
+python buildWZworkspace_forZZ_.py --config=config_ZZ_onlyOneCorrError
+python buildWZworkspace_forZZ_.py --config=config_ZZ_withSherpaSyst
+python buildWZworkspace_forZZ_1sigma.py --config=config_ZZ_Zlldata_withSherpaSyst
+python buildWZworkspace_forZZ_1sigma.py --config=config_ZZ_Zlldata
+
+rm wv_semil_ch12combined.txt
+combineCards.py wv_semil_ch1boosted.txt > wv_semil_ch12combined.txt
+text2workspace.py -m 126 wv_semil_ch12combined.txt -o Example_ATGC_WV_ch12_workspace.root -P CombinedEWKAnalysis.CommonTools.HagiwaraAndZeppenfeldTwoDimensionalModel_wz:dkglZModel_wz 
+
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P dkg --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_dkg_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_detail
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_dkg_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_noQCDACCUncertainty.root
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P dkg --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9  -t -1 --expectSignal=1| tee output_1D_dkg_OKcorrelations_shape1All_AllUnc_f5z_expected_DanieleFiles_noJetScale_detail
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_dkg_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_noJetScale_expected.root
+
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit --singlePoint -P lZ=0. -P topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV=0. --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_detail_ScanTopWW
+
+==========================
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUnc_withSherpaSyst_1sigmaInput
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUnc_withSherpaSyst_1sigmaInput.root
+
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUnc_withSherpaSyst_1sigmaInput.root lZ
+==========================
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_NOSherpaSyst_3sigmaInput
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_NOSherpaSyst_3sigmaInput.root
+
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_NOSherpaSyst_3sigmaInput.root lZ
+==========================
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUnc_NOSherpaSyst_1sigmaInput
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUnc_NOSherpaSyst_1sigmaInput.root
+
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUnc_NOSherpaSyst_1sigmaInput.root lZ
+==========================
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_NOSherpaSyst_1sigmaInput
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_NOSherpaSyst_1sigmaInput.root
+
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_NOSherpaSyst_1sigmaInput.root lZ
+==========================
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_withSherpaSyst_1sigmaInput
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_withSherpaSyst_1sigmaInput.root
+
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_withSherpaSyst_1sigmaInput.root lZ
+
+==========================
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_withSherpaSyst_3sigmaOriginalInput
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_withSherpaSyst_3sigmaOriginalInput.root
+
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_withSherpaSyst_3sigmaOriginalInput.root lZ
+
+==========================
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_NOSherpaSyst_3sigmaOriginalInput
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_NOSherpaSyst_3sigmaOriginalInput.root
+
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_NOSherpaSyst_3sigmaOriginalInput.root lZ
+==========================
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_NOSherpaSyst_3sigmaOriginalInput_ZllDownTo0
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_NOSherpaSyst_3sigmaOriginalInput_ZllDownTo0.root
+
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUnc_NOSherpaSyst_3sigmaOriginalInput_ZllDownTo0.root lZ
+
+==========================
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUnc_withSherpaSyst_3sigmaOriginalInput
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUnc_withSherpaSyst_3sigmaOriginalInput.root
+
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUnc_withSherpaSyst_3sigmaOriginalInput.root lZ
+
+---------------------
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_DanieleFilesFit_check1sigmaVS3sigma_3sigma
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_check1sigmaVS3sigma_3sigma.root
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_check1sigmaVS3sigma_3sigma.root lZ
+cp wv_semil_ch12combined.txt wv_semil_ch12combined_3sigma.txt
+cp Example_ATGC_WV_ch12_workspace.root Example_ATGC_WV_ch12_workspace_3sigma.root
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_DanieleFilesFit_check1sigmaVS3sigma_1sigma
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_check1sigmaVS3sigma_1sigma.root
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_check1sigmaVS3sigma_1sigma.root lZ
+cp wv_semil_ch12combined.txt wv_semil_ch12combined_1sigma.txt
+cp Example_ATGC_WV_ch12_workspace.root Example_ATGC_WV_ch12_workspace_1sigma.root
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_detail_allUncDownTo0_1704
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUncDownTo0.root
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUncDownTo0.root lZ
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P dkg --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_dkg_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_detail_allUncDownTo0_1704
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_dkg_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUncDownTo0.root
+python build1DInterval_dkg.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_dkg_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUncDownTo0.root dkg
+
+cp Example_ATGC_WV_ch12_workspace.root Example_ATGC_WV_ch12_workspace_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUncDownTo0.root
+cp wv_semil_ch12combined.txt wv_semil_ch12combined_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUncDownTo0.txt 
+
+---------------------
+
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_detail_withSherpaSyst_noACCSyat_1sigmaInput_1704
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_withSherpaSyst_noACCSyat_1sigmaInput.root
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_withSherpaSyst_noACCSyat_1sigmaInput.root lZ
+
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_detail_allUncDownTo0_noSherpaSyst_noACCSyat_1704
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUncDownTo0_noSherpaSyst_noACCSyat.root
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUncDownTo0_noSherpaSyst_noACCSyat.root lZ
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_detail_noSherpaSyst_noACCSyat_1704
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_noSherpaSyst_noACCSyat.root
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_noSherpaSyst_noACCSyat.root lZ
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_detail_withSherpaSyst_noACCSyat_1704
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_withSherpaSyst_noACCSyat.root
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_withSherpaSyst_noACCSyat.root lZ
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_detail_allUncDownTo0_withSherpaSyst_noACCSyat_1704
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUncDownTo0_withSherpaSyst_noACCSyat.root
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUncDownTo0_withSherpaSyst_noACCSyat.root lZ
+
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_detail_allUncDownTo0_withSherpaSyst_1704
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUncDownTo0_withSherpaSyst.root
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUncDownTo0_withSherpaSyst.root lZ
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P dkg --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_dkg_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_detail_allUncDownTo0_withSherpaSyst_1704
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_dkg_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUncDownTo0_withSherpaSyst.root
+python build1DInterval_dkg.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_dkg_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUncDownTo0_withSherpaSyst.root dkg
+
+cp Example_ATGC_WV_ch12_workspace.root Example_ATGC_WV_ch12_workspace_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUncDownTo0_withSherpaSyst.root
+cp wv_semil_ch12combined.txt wv_semil_ch12combined_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_DanieleFilesFit_allUncDownTo0_withSherpaSyst.txt 
+
+-----------------------
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_detail_allUncDownTo0_withSherpaSyst_1704
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUncDownTo0_withSherpaSyst.root
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUncDownTo0_withSherpaSyst.root lZ
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P dkg --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_dkg_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_detail_allUncDownTo0_withSherpaSyst_1704
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_dkg_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUncDownTo0_withSherpaSyst.root
+python build1DInterval_dkg.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_dkg_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUncDownTo0_withSherpaSyst.root dkg
+
+cp Example_ATGC_WV_ch12_workspace.root Example_ATGC_WV_ch12_workspace_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUncDownTo0_withSherpaSyst.root
+cp wv_semil_ch12combined.txt wv_semil_ch12combined_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_allUnc_LucaFilesFit_allUncDownTo0_withSherpaSyst.txt 
+
+-----------------------
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_noQCDACCUncertainty_DanieleFilesFit_detail
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_noQCDACCUncertainty_DanieleFilesFit.root
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120.root lZ
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_noQCDACCUncertainty_LucaFilesFit_detail
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_noQCDACCUncertainty_LucaFilesFit.root
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120.root lZ
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9  -t -1 --expectSignal=1| tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_expected_DanieleFiles_statErrOnly_detail
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f5z_DanieleFiles_statErrOnly_expected.root
+
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_lZ_OKcorrelations_shape1All_AllUnc_f4z_detail
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f4z.root
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P lZ --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9  -t -1 --expectSignal=1| tee output_1D_lZ_OKcorrelations_shape1All_AllUnc__f4z_expected_detail
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f4g_expected.root
+
+cp Example_ATGC_WV_ch12_workspace.root Example_ATGC_WV_ch12_workspace_shape1All_AllUnc_f4z.root
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f4z.root lZ
+python build1DInterval_lZ.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_lZ_OKcorrelations_shape1All_AllUnc_f4z_expected.root lZ
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P dkg --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_dkg.root
+python build1DInterval_dkg.py -0.03 0.03 higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_dkg.root dkg
+
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P dkg --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9 | tee output_1D_dkg_OKcorrelations_shape1All_AllUnc_f5g_detail
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_dkg_OKcorrelations_shape1All_AllUnc_f5g.root
+combine Example_ATGC_WV_ch12_workspace.root -M MultiDimFit -P dkg --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 --verbose 9  -t -1 --expectSignal=1| tee output_1D_dkg_OKcorrelations_shape1All_AllUnc_f5g_expected_detail
+cp higgsCombineTest.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_ZZ_2l2nu_1D_dkg_OKcorrelations_shape1All_AllUnc_f4g_expected.root

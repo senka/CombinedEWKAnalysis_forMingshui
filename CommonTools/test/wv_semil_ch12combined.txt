@@ -1,0 +1,36 @@
+Combination of wv_semil_ch1boosted.txt
+imax 1 number of bins
+jmax 3 number of processes minus 1
+kmax 17 number of nuisance parameters
+----------------------------------------------------------------------------------------------------------------------------------
+shapes WV_semileptonic_bkg1_ch1           ch1                                ./ch1_boosted_ws.root WV_ch1boosted:$PROCESS WV_ch1boosted:$PROCESS_$SYSTEMATIC
+shapes WV_semileptonic_bkg2_ch1           ch1                                ./ch1_boosted_ws.root WV_ch1boosted:$PROCESS WV_ch1boosted:$PROCESS_$SYSTEMATIC
+shapes WV_semileptonic_bkg3_ch1           ch1                                ./ch1_boosted_ws.root WV_ch1boosted:$PROCESS WV_ch1boosted:$PROCESS_$SYSTEMATIC
+shapes WWgammaZ_WV_atgc_semileptonic_ch1  ch1                                ./ch1_boosted_ws.root WV_ch1boosted:ATGCPdf_$PROCESS WV_ch1boosted:ATGCPdf_$PROCESS_$SYSTEMATIC
+shapes data_obs                           ch1                                ./ch1_boosted_ws.root WV_ch1boosted:$PROCESS
+----------------------------------------------------------------------------------------------------------------------------------
+bin          ch1  
+observation  465.0
+----------------------------------------------------------------------------------------------------------------------------------
+bin                                                                          ch1                                ch1                                ch1                                ch1                              
+process                                                                      WWgammaZ_WV_atgc_semileptonic_ch1  WV_semileptonic_bkg2_ch1           WV_semileptonic_bkg3_ch1           WV_semileptonic_bkg1_ch1         
+process                                                                      0                                  1                                  2                                  3                                
+rate                                                                         198.7968                           80.9058                            111.6899                           98.0599                          
+----------------------------------------------------------------------------------------------------------------------------------
+CMS_eff_b               shape1                                               1.0                                -                                  1.0                                -                                
+CMS_eff_c               lnN                                                  1.03                               -                                  1.03                               1.03                             
+CMS_hzz2l2v_les         shape1                                               1.0                                -                                  1.0                                -                                
+CMS_hzz2l2v_pu          shape1                                               1.0                                -                                  1.0                                -                                
+CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c   lnN                                  -                                  1.2                                -                                  -                                
+CMS_hzz2l2v_umet        shape1                                               1.0                                -                                  1.0                                -                                
+CMS_res_j               shape1                                               1.0                                -                                  1.0                                -                                
+CMS_scale_j             shape1                                               1.0                                -                                  1.0                                -                                
+QCDJeT_aTG              lnN                                                  1.12                               -                                  -                                  -                                
+QCDscale_VV             lnN                                                  -                                  -                                  1.054                              -                                
+lumi_8TeV               lnN                                                  1.026                              -                                  1.026                              1.026                            
+pdf_VV                  lnN                                                  1.058                              -                                  1.042                              -                                
+topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV   shape1              -                                  1.0                                -                                  -                                
+wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV   shape1                              -                                  -                                  1.0                                -                                
+zll_CMS_hzz2l2v_stat_ll_zll_8TeV   shape1                                    -                                  -                                  -                                  1.0                              
+zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto   shape1                                   1.0                                -                                  -                                  -                                
+zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV   shape1                            1.0                                -                                  -                                  -                                

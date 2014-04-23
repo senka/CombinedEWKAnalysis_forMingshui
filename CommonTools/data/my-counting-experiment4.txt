@@ -1,0 +1,28 @@
+# Simple counting experiment, with one signal and a few background processes 
+imax 1  number of channels
+jmax 3  number of backgrounds
+kmax 9  number of nuisance parameters (sources of systematical uncertainties)
+------------
+# we have just one channel, in which we observe 0 events
+bin 1
+observation 0
+------------
+# now we list the expected events for signal and all backgrounds in that bin
+# the second 'process' line must have a positive number for backgrounds, and 0 for signal
+# then we list the independent sources of uncertainties, and give their effect (syst. error)
+# on each process and bin
+bin              1        1		1	1
+process          aaWWBSM_emu  aaWWSM	ggtt	diffww
+process          0        1		2	3
+rate             1.0     0.12		0.01	0.01  
+
+------------
+lumi     lnN      1.022 1.022  -     -      lumi affects both signal and bkg (data-driven). lnN = lognormal
+lepton   lnN      1.042 1.042  1.042 1.042  lepton trigger and id uncertainty
+vtx      lnN      1.01  1.01   1.01  1.01   vertex uncertainty
+pu       lnN      1.10  1.10   1.10  1.10   PU uncertainty 
+i_scale  lnN      1.16  1.16   1.16  -      Inelastic scale factor uncertainty 
+eff_var  lnN      1.10  -      -     -      Model-dependent efficiency
+aaWW_norm  gmN 27 -     0.004  -     -      MC statistical uncertainty
+ggtt_norm gmN 5   -     -      0.002 -      MC stat uncertainty
+diffWW_norm gmN 1 -     -      -     0.01   MC stat uncertainty

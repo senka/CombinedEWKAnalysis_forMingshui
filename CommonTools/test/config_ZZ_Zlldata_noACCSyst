@@ -1,0 +1,15 @@
+[Global]
+par1Name = dk
+par1PlotName = #lambda
+par2Name = lam
+par2PlotName = #Delta g^{Z}
+
+[ch1]
+Nbkg=3
+bkg1_name=zll
+bkg1_shape_syst=zll_CMS_hzz2l2v_stat_ll_zll_8TeV
+bkg2_name=topwwwjetsdata
+bkg2_shape_syst=topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV
+bkg3_name=wz3lnu
+bkg3_shape_syst=wz3lnu_CMS_eff_b,wz3lnu_CMS_hzz2l2v_les,wz3lnu_CMS_hzz2l2v_pu,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,wz3lnu_CMS_hzz2l2v_umet,wz3lnu_CMS_res_j,wz3lnu_CMS_scale_j
+signal_shape_syst=zz2l2nu_CMS_eff_b,zz2l2nu_CMS_hzz2l2v_les,zz2l2nu_CMS_hzz2l2v_pu,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV,zz2l2nu_CMS_hzz2l2v_umet,zz2l2nu_CMS_res_j,zz2l2nu_CMS_scale_j

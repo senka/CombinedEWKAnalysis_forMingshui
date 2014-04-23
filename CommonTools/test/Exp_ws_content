@@ -1,0 +1,246 @@
+WHEN ALL Shape1
+
+================================== *_ws.root file ====================
+RooWorkspace(WV_ch1boosted) WV_ch1boosted contents
+
+variables
+---------
+(CMS_eff_b,CMS_hzz2l2v_les,CMS_hzz2l2v_pu,CMS_hzz2l2v_umet,CMS_res_j,CMS_scale_j,W_pt_ch1,dg1,dkg,kappaH_1,kappaH_2,kappaH_3,kappaH_4,kappaH_5,kappaH_6,kappaH_7,kappaH_8,kappaL_1,kappaL_2,kappaL_3,kappaL_4,kappaL_5,kappaL_6,kappaL_7,kappaL_8,lZ,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV)
+
+p.d.f.s
+-------
+RooATGCSemiAnalyticPdf_wz::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape ] = 78.4505
+RooATGCSemiAnalyticPdf_wz::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_CMS_eff_bDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_eff_bDown ] = 78.2261
+RooATGCSemiAnalyticPdf_wz::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_CMS_eff_bUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_eff_bUp ] = 78.8218
+RooATGCSemiAnalyticPdf_wz::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_CMS_hzz2l2v_lesDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_lesDown ] = 77.8294
+RooATGCSemiAnalyticPdf_wz::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_CMS_hzz2l2v_lesUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_lesUp ] = 78.5141
+RooATGCSemiAnalyticPdf_wz::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_CMS_hzz2l2v_puDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_puDown ] = 79.5965
+RooATGCSemiAnalyticPdf_wz::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_CMS_hzz2l2v_puUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_puUp ] = 77.0756
+RooATGCSemiAnalyticPdf_wz::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_CMS_hzz2l2v_umetDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_umetDown ] = 77.6255
+RooATGCSemiAnalyticPdf_wz::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_CMS_hzz2l2v_umetUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_umetUp ] = 78.7405
+RooATGCSemiAnalyticPdf_wz::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_CMS_res_jDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_res_jDown ] = 80.9469
+RooATGCSemiAnalyticPdf_wz::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_CMS_res_jUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_res_jUp ] = 76.0661
+RooATGCSemiAnalyticPdf_wz::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_CMS_scale_jDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_scale_jDown ] = 95.0046
+RooATGCSemiAnalyticPdf_wz::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_CMS_scale_jUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_scale_jUp ] = 49.8404
+RooATGCSemiAnalyticPdf_wz::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown ] = 51.5334
+RooATGCSemiAnalyticPdf_wz::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp ] = 105.367
+RooATGCSemiAnalyticPdf_wz::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVDown ] = 76.0541
+RooATGCSemiAnalyticPdf_wz::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVUp ] = 80.8469
+
+functions
+--------
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral1[ kappaLow=kappaL_1 kappaHigh=kappaH_1 theta=CMS_eff_b ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral2[ kappaLow=kappaL_2 kappaHigh=kappaH_2 theta=zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral3[ kappaLow=kappaL_3 kappaHigh=kappaH_3 theta=CMS_hzz2l2v_les ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral4[ kappaLow=kappaL_4 kappaHigh=kappaH_4 theta=CMS_hzz2l2v_pu ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral5[ kappaLow=kappaL_5 kappaHigh=kappaH_5 theta=zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral6[ kappaLow=kappaL_6 kappaHigh=kappaH_6 theta=CMS_hzz2l2v_umet ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral7[ kappaLow=kappaL_7 kappaHigh=kappaH_7 theta=CMS_res_j ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral8[ kappaLow=kappaL_8 kappaHigh=kappaH_8 theta=CMS_scale_j ] = 1
+RooProduct::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_norm[ ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral1 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral2 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral3 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral4 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral5 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral6 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral7 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral8 ] = 1
+RooHistFunc::WV_semileptonic_SM_ch1_shape[ depList=(W_pt_ch1) ] = 78.4861
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_eff_bDown[ depList=(W_pt_ch1) ] = 78.2617
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_eff_bUp[ depList=(W_pt_ch1) ] = 78.8576
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_lesDown[ depList=(W_pt_ch1) ] = 77.8648
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_lesUp[ depList=(W_pt_ch1) ] = 78.5498
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_puDown[ depList=(W_pt_ch1) ] = 79.6327
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_puUp[ depList=(W_pt_ch1) ] = 77.1106
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_umetDown[ depList=(W_pt_ch1) ] = 77.6608
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_umetUp[ depList=(W_pt_ch1) ] = 78.7763
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_res_jDown[ depList=(W_pt_ch1) ] = 80.9837
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_res_jUp[ depList=(W_pt_ch1) ] = 76.1006
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_scale_jDown[ depList=(W_pt_ch1) ] = 95.0478
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_scale_jUp[ depList=(W_pt_ch1) ] = 49.8631
+RooHistFunc::WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown[ depList=(W_pt_ch1) ] = 51.5568
+RooHistFunc::WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp[ depList=(W_pt_ch1) ] = 105.415
+RooHistFunc::WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVDown[ depList=(W_pt_ch1) ] = 76.0886
+RooHistFunc::WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVUp[ depList=(W_pt_ch1) ] = 80.8836
+
+datasets
+--------
+RooDataHist::data_obs(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg1_ch1(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg2_ch1(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg3_ch1(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg1_ch1_CMS_hzz2l2v_puUp(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg1_ch1_CMS_hzz2l2v_puDown(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg1_ch1_zll_CMS_hzz2l2v_stat_ll_zll_8TeVUp(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg1_ch1_zll_CMS_hzz2l2v_stat_ll_zll_8TeVDown(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg1_ch1_CMS_hzz2l2v_umetUp(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg1_ch1_CMS_hzz2l2v_umetDown(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg1_ch1_CMS_res_jUp(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg1_ch1_CMS_res_jDown(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg1_ch1_CMS_scale_jUp(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg1_ch1_CMS_scale_jDown(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg2_ch1_topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVUp(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg2_ch1_topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeVDown(W_pt_ch1)
+
+RooDataHist::WV_semileptonic_bkg3_ch1_CMS_eff_bUp(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg3_ch1_CMS_eff_bDown(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_lesUp(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_lesDown(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_puUp(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_puDown(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg3_ch1_wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVUp(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg3_ch1_wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeVDown(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_umetUp(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_umetDown(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg3_ch1_CMS_res_jUp(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg3_ch1_CMS_res_jDown(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg3_ch1_CMS_scale_jUp(W_pt_ch1)
+RooDataHist::WV_semileptonic_bkg3_ch1_CMS_scale_jDown(W_pt_ch1)
+
+
+================================== Example*.root file ====================
+
+variables
+---------
+(CMS_channel,CMS_eff_b,CMS_eff_b_In,CMS_eff_c,CMS_eff_c_In,CMS_hzz2l2v_les,CMS_hzz2l2v_les_In,CMS_hzz2l2v_pu,CMS_hzz2l2v_pu_In,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_In,CMS_hzz2l2v_umet,CMS_hzz2l2v_umet_In,CMS_res_j,CMS_res_j_In,CMS_scale_j,CMS_scale_j_In,QCDJeT_aTG,QCDJeT_aTG_In,QCDscale_VV,QCDscale_VV_In,W_pt_ch1,dg1,dkg,kappaH_1,kappaH_2,kappaH_3,kappaH_4,kappaH_5,kappaH_6,kappaH_7,kappaH_8,kappaL_1,kappaL_2,kappaL_3,kappaL_4,kappaL_5,kappaL_6,kappaL_7,kappaL_8,lZ,lumi_8TeV,lumi_8TeV_In,pdf_VV,pdf_VV_In,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_In,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_In,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV_In,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_In,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_In)
+
+p.d.f.s
+-------
+SimpleGaussianConstraint::CMS_eff_b_Pdf[ x=CMS_eff_b mean=CMS_eff_b_In sigma=1 ] = 1
+SimpleGaussianConstraint::CMS_eff_c_Pdf[ x=CMS_eff_c mean=CMS_eff_c_In sigma=1 ] = 1
+SimpleGaussianConstraint::CMS_hzz2l2v_les_Pdf[ x=CMS_hzz2l2v_les mean=CMS_hzz2l2v_les_In sigma=1 ] = 1
+SimpleGaussianConstraint::CMS_hzz2l2v_pu_Pdf[ x=CMS_hzz2l2v_pu mean=CMS_hzz2l2v_pu_In sigma=1 ] = 1
+SimpleGaussianConstraint::CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_Pdf[ x=CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c mean=CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_In sigma=1 ] = 1
+SimpleGaussianConstraint::CMS_hzz2l2v_umet_Pdf[ x=CMS_hzz2l2v_umet mean=CMS_hzz2l2v_umet_In sigma=1 ] = 1
+SimpleGaussianConstraint::CMS_res_j_Pdf[ x=CMS_res_j mean=CMS_res_j_In sigma=1 ] = 1
+SimpleGaussianConstraint::CMS_scale_j_Pdf[ x=CMS_scale_j mean=CMS_scale_j_In sigma=1 ] = 1
+SimpleGaussianConstraint::QCDJeT_aTG_Pdf[ x=QCDJeT_aTG mean=QCDJeT_aTG_In sigma=1 ] = 1
+SimpleGaussianConstraint::QCDscale_VV_Pdf[ x=QCDscale_VV mean=QCDscale_VV_In sigma=1 ] = 1
+SimpleGaussianConstraint::lumi_8TeV_Pdf[ x=lumi_8TeV mean=lumi_8TeV_In sigma=1 ] = 1
+RooSimultaneousOpt::model_b[ indexCat=CMS_channel ch1=pdf_binch1_bonly extraConstraints=() ] = 0.000890416
+RooSimultaneousOpt::model_s[ indexCat=CMS_channel ch1=pdf_binch1 extraConstraints=() ] = 0.105588
+RooProdPdf::nuisancePdf[ CMS_eff_b_Pdf * CMS_eff_c_Pdf * CMS_hzz2l2v_les_Pdf * CMS_hzz2l2v_pu_Pdf * CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_Pdf * CMS_hzz2l2v_umet_Pdf * CMS_res_j_Pdf * CMS_scale_j_Pdf * QCDJeT_aTG_Pdf * QCDscale_VV_Pdf * lumi_8TeV_Pdf * pdf_VV_Pdf * topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_Pdf * wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_Pdf * zll_CMS_hzz2l2v_stat_ll_zll_8TeV_Pdf * zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_Pdf * zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_Pdf ] = 1
+SimpleGaussianConstraint::pdf_VV_Pdf[ x=pdf_VV mean=pdf_VV_In sigma=1 ] = 1
+RooProdPdf::pdf_binch1[ CMS_eff_b_Pdf * CMS_eff_c_Pdf * CMS_hzz2l2v_les_Pdf * CMS_hzz2l2v_pu_Pdf * CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_Pdf * CMS_hzz2l2v_umet_Pdf * CMS_res_j_Pdf * CMS_scale_j_Pdf * QCDJeT_aTG_Pdf * QCDscale_VV_Pdf * lumi_8TeV_Pdf * pdf_VV_Pdf * topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_Pdf * wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_Pdf * zll_CMS_hzz2l2v_stat_ll_zll_8TeV_Pdf * zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_Pdf * zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_Pdf * pdf_binch1_nuis ] = 0.105588
+RooProdPdf::pdf_binch1_bonly[ CMS_eff_b_Pdf * CMS_eff_c_Pdf * CMS_hzz2l2v_les_Pdf * CMS_hzz2l2v_pu_Pdf * CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_Pdf * CMS_hzz2l2v_umet_Pdf * CMS_res_j_Pdf * CMS_scale_j_Pdf * QCDJeT_aTG_Pdf * QCDscale_VV_Pdf * lumi_8TeV_Pdf * pdf_VV_Pdf * topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_Pdf * wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_Pdf * zll_CMS_hzz2l2v_stat_ll_zll_8TeV_Pdf * zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_Pdf * zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_Pdf * pdf_binch1_bonly_nuis ] = 0.000890416
+RooAddPdf::pdf_binch1_bonly_nuis[ n_exp_final_binch1_proc_WV_semileptonic_bkg2_ch1 * shapeBkg_ch1_WV_semileptonic_bkg2_ch1_morph + n_exp_final_binch1_proc_WV_semileptonic_bkg3_ch1 * shapeBkg_ch1_WV_semileptonic_bkg3_ch1_morph + n_exp_final_binch1_proc_WV_semileptonic_bkg1_ch1 * shapeBkg_ch1_WV_semileptonic_bkg1_ch1_morph ] = 0.000890416
+RooAddPdf::pdf_binch1_nuis[ n_exp_final_binch1_proc_WV_semileptonic_bkg2_ch1 * shapeBkg_ch1_WV_semileptonic_bkg2_ch1_morph + n_exp_final_binch1_proc_WV_semileptonic_bkg3_ch1 * shapeBkg_ch1_WV_semileptonic_bkg3_ch1_morph + n_exp_final_binch1_proc_WWgammaZ_WV_atgc_semileptonic_ch1 * shapeSig_ch1_WWgammaZ_WV_atgc_semileptonic_ch1_morph + n_exp_final_binch1_proc_WV_semileptonic_bkg1_ch1 * shapeBkg_ch1_WV_semileptonic_bkg1_ch1_morph ] = 0.105588
+FastVerticalInterpHistPdf2::shapeBkg_ch1_WV_semileptonic_bkg1_ch1_morph[ coefList=(CMS_hzz2l2v_pu_scaled_ch1_WV_semileptonic_bkg1_ch1,CMS_hzz2l2v_umet_scaled_ch1_WV_semileptonic_bkg1_ch1,CMS_res_j_scaled_ch1_WV_semileptonic_bkg1_ch1,CMS_scale_j_scaled_ch1_WV_semileptonic_bkg1_ch1,zll_CMS_hzz2l2v_stat_ll_zll_8TeV_scaled_ch1_WV_semileptonic_bkg1_ch1) x=W_pt_ch1 ] = 1e-09
+FastVerticalInterpHistPdf2::shapeBkg_ch1_WV_semileptonic_bkg2_ch1_morph[ coefList=(topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_scaled_ch1_WV_semileptonic_bkg2_ch1) x=W_pt_ch1 ] = 1e-09
+FastVerticalInterpHistPdf2::shapeBkg_ch1_WV_semileptonic_bkg3_ch1_morph[ coefList=(CMS_eff_b_scaled_ch1_WV_semileptonic_bkg3_ch1,CMS_hzz2l2v_les_scaled_ch1_WV_semileptonic_bkg3_ch1,CMS_hzz2l2v_pu_scaled_ch1_WV_semileptonic_bkg3_ch1,CMS_hzz2l2v_umet_scaled_ch1_WV_semileptonic_bkg3_ch1,CMS_res_j_scaled_ch1_WV_semileptonic_bkg3_ch1,CMS_scale_j_scaled_ch1_WV_semileptonic_bkg3_ch1,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_scaled_ch1_WV_semileptonic_bkg3_ch1) x=W_pt_ch1 ] = 0.00174153
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape ] = 0.220581
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_eff_bDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_eff_bDown ] = 0.198774
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_eff_bUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_eff_bUp ] = 0.220581
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_hzz2l2v_lesDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_lesDown ] = 0.220581
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_hzz2l2v_lesUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_lesUp ] = 0.220581
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_hzz2l2v_puDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_puDown ] = 0.221112
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_hzz2l2v_puUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_puUp ] = 0.216244
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_hzz2l2v_umetDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_umetDown ] = 0.220581
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_hzz2l2v_umetUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_umetUp ] = 0.220581
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_res_jDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_res_jDown ] = 0.220581
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_res_jUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_res_jUp ] = 0.240604
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_scale_jDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_scale_jDown ] = 0.320363
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_CMS_scale_jUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_CMS_scale_jUp ] = 0.14666
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown ] = 0
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp ] = 0.78118
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVDown[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVDown ] = 0.0927037
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVUp[ observable=W_pt_ch1 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVUp ] = 0.348458
+VerticalInterpPdf::shapeSig_ch1_WWgammaZ_WV_atgc_semileptonic_ch1_morph[ ] = 0.220581
+SimpleGaussianConstraint::topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_Pdf[ x=topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV mean=topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_In sigma=1 ] = 1
+SimpleGaussianConstraint::wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_Pdf[ x=wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV mean=wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_In sigma=1 ] = 1
+SimpleGaussianConstraint::zll_CMS_hzz2l2v_stat_ll_zll_8TeV_Pdf[ x=zll_CMS_hzz2l2v_stat_ll_zll_8TeV mean=zll_CMS_hzz2l2v_stat_ll_zll_8TeV_In sigma=1 ] = 1
+SimpleGaussianConstraint::zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_Pdf[ x=zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto mean=zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_In sigma=1 ] = 1
+SimpleGaussianConstraint::zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_Pdf[ x=zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV mean=zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_In sigma=1 ] = 1
+
+functions
+--------
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral1[ kappaLow=kappaL_1 kappaHigh=kappaH_1 theta=CMS_eff_b ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral2[ kappaLow=kappaL_2 kappaHigh=kappaH_2 theta=zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral3[ kappaLow=kappaL_3 kappaHigh=kappaH_3 theta=CMS_hzz2l2v_les ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral4[ kappaLow=kappaL_4 kappaHigh=kappaH_4 theta=CMS_hzz2l2v_pu ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral5[ kappaLow=kappaL_5 kappaHigh=kappaH_5 theta=zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral6[ kappaLow=kappaL_6 kappaHigh=kappaH_6 theta=CMS_hzz2l2v_umet ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral7[ kappaLow=kappaL_7 kappaHigh=kappaH_7 theta=CMS_res_j ] = 1
+AsymPow::ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral8[ kappaLow=kappaL_8 kappaHigh=kappaH_8 theta=CMS_scale_j ] = 1
+RooProduct::CMS_eff_b_scaled_ch1_WV_semileptonic_bkg3_ch1[ 0.33 * CMS_eff_b ] = 0
+RooProduct::CMS_eff_b_scaled_ch1_WWgammaZ_WV_atgc_semileptonic_ch1[ 0.33 * CMS_eff_b ] = 0
+RooProduct::CMS_hzz2l2v_les_scaled_ch1_WV_semileptonic_bkg3_ch1[ 0.33 * CMS_hzz2l2v_les ] = 0
+RooProduct::CMS_hzz2l2v_les_scaled_ch1_WWgammaZ_WV_atgc_semileptonic_ch1[ 0.33 * CMS_hzz2l2v_les ] = 0
+RooProduct::CMS_hzz2l2v_pu_scaled_ch1_WV_semileptonic_bkg1_ch1[ 0.33 * CMS_hzz2l2v_pu ] = 0
+RooProduct::CMS_hzz2l2v_pu_scaled_ch1_WV_semileptonic_bkg3_ch1[ 0.33 * CMS_hzz2l2v_pu ] = 0
+RooProduct::CMS_hzz2l2v_pu_scaled_ch1_WWgammaZ_WV_atgc_semileptonic_ch1[ 0.33 * CMS_hzz2l2v_pu ] = 0
+RooProduct::CMS_hzz2l2v_umet_scaled_ch1_WV_semileptonic_bkg1_ch1[ 0.33 * CMS_hzz2l2v_umet ] = 0
+RooProduct::CMS_hzz2l2v_umet_scaled_ch1_WV_semileptonic_bkg3_ch1[ 0.33 * CMS_hzz2l2v_umet ] = 0
+RooProduct::CMS_hzz2l2v_umet_scaled_ch1_WWgammaZ_WV_atgc_semileptonic_ch1[ 0.33 * CMS_hzz2l2v_umet ] = 0
+RooProduct::CMS_res_j_scaled_ch1_WV_semileptonic_bkg1_ch1[ 0.33 * CMS_res_j ] = 0
+RooProduct::CMS_res_j_scaled_ch1_WV_semileptonic_bkg3_ch1[ 0.33 * CMS_res_j ] = 0
+RooProduct::CMS_res_j_scaled_ch1_WWgammaZ_WV_atgc_semileptonic_ch1[ 0.33 * CMS_res_j ] = 0
+RooProduct::CMS_scale_j_scaled_ch1_WV_semileptonic_bkg1_ch1[ 0.33 * CMS_scale_j ] = 0
+RooProduct::CMS_scale_j_scaled_ch1_WV_semileptonic_bkg3_ch1[ 0.33 * CMS_scale_j ] = 0
+RooProduct::CMS_scale_j_scaled_ch1_WWgammaZ_WV_atgc_semileptonic_ch1[ 0.33 * CMS_scale_j ] = 0
+RooATGCProcessScaling_wz::Scaling_WWgammaZ_WV_atgc_semileptonic_ch1[ lZ=lZ dkg=dkg dg1=dg1 ] = 0.999978
+RooHistFunc::Scaling_base_pdf_WWgammaZ_WV_atgc_semileptonic_ch1[ depList=(W_pt_ch1) ] = 0.219457
+RooHistFunc::WV_semileptonic_SM_ch1_shape[ depList=(W_pt_ch1) ] = 0.219457
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_eff_bDown[ depList=(W_pt_ch1) ] = 0.197761
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_eff_bUp[ depList=(W_pt_ch1) ] = 0.219457
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_lesDown[ depList=(W_pt_ch1) ] = 0.219457
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_lesUp[ depList=(W_pt_ch1) ] = 0.219457
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_puDown[ depList=(W_pt_ch1) ] = 0.219985
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_puUp[ depList=(W_pt_ch1) ] = 0.215141
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_umetDown[ depList=(W_pt_ch1) ] = 0.219457
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_hzz2l2v_umetUp[ depList=(W_pt_ch1) ] = 0.219457
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_res_jDown[ depList=(W_pt_ch1) ] = 0.219457
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_res_jUp[ depList=(W_pt_ch1) ] = 0.239378
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_scale_jDown[ depList=(W_pt_ch1) ] = 0.31873
+RooHistFunc::WV_semileptonic_SM_ch1_shape_CMS_scale_jUp[ depList=(W_pt_ch1) ] = 0.145912
+RooHistFunc::WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoDown[ depList=(W_pt_ch1) ] = -0.338285
+RooHistFunc::WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVetoUp[ depList=(W_pt_ch1) ] = 0.777198
+RooHistFunc::WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVDown[ depList=(W_pt_ch1) ] = 0.0922312
+RooHistFunc::WV_semileptonic_SM_ch1_shape_zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeVUp[ depList=(W_pt_ch1) ] = 0.346682
+ProcessNormalization::n_exp_binch1_proc_WV_semileptonic_bkg1_ch1[ thetaList=(CMS_eff_c,lumi_8TeV) asymmThetaList=() otherFactorList=() ] = 25.8013
+ProcessNormalization::n_exp_binch1_proc_WV_semileptonic_bkg2_ch1[ thetaList=(CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c) asymmThetaList=() otherFactorList=() ] = 80.9058
+ProcessNormalization::n_exp_binch1_proc_WV_semileptonic_bkg3_ch1[ thetaList=(CMS_eff_c,QCDscale_VV,lumi_8TeV,pdf_VV) asymmThetaList=() otherFactorList=() ] = 111.635
+ProcessNormalization::n_exp_binch1_proc_WWgammaZ_WV_atgc_semileptonic_ch1[ thetaList=(CMS_eff_c,QCDJeT_aTG,lumi_8TeV,pdf_VV) asymmThetaList=() otherFactorList=(Scaling_WWgammaZ_WV_atgc_semileptonic_ch1) ] = 198.792
+RooProduct::n_exp_final_binch1_proc_WV_semileptonic_bkg1_ch1[ n_exp_binch1_proc_WV_semileptonic_bkg1_ch1 * systeff_ch1_WV_semileptonic_bkg1_ch1_CMS_hzz2l2v_pu * systeff_ch1_WV_semileptonic_bkg1_ch1_CMS_hzz2l2v_umet * systeff_ch1_WV_semileptonic_bkg1_ch1_CMS_res_j * systeff_ch1_WV_semileptonic_bkg1_ch1_CMS_scale_j * systeff_ch1_WV_semileptonic_bkg1_ch1_zll_CMS_hzz2l2v_stat_ll_zll_8TeV ] = 25.8013
+RooProduct::n_exp_final_binch1_proc_WV_semileptonic_bkg2_ch1[ n_exp_binch1_proc_WV_semileptonic_bkg2_ch1 * systeff_ch1_WV_semileptonic_bkg2_ch1_topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV ] = 80.9058
+RooProduct::n_exp_final_binch1_proc_WV_semileptonic_bkg3_ch1[ n_exp_binch1_proc_WV_semileptonic_bkg3_ch1 * systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_eff_b * systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_les * systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_pu * systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_umet * systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_res_j * systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_scale_j * systeff_ch1_WV_semileptonic_bkg3_ch1_wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV ] = 111.635
+RooProduct::n_exp_final_binch1_proc_WWgammaZ_WV_atgc_semileptonic_ch1[ n_exp_binch1_proc_WWgammaZ_WV_atgc_semileptonic_ch1 * shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1__norm ] = 198.792
+RooProduct::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch1_ch1__norm[ ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral1 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral2 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral3 * ATGCPdf_gammaZ_WV_atgc_semileptonic_ch1_integral4 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral5 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral6 * ATGCPdf_WWgammaZ_WV_atgc_semileptonic_ch1_integral7 * ATGCPdf_WWgammaZ_WV_atgc_semiltonic_ch1_integral8 ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg1_ch1_CMS_hzz2l2v_pu[ kappaLow=1.00303 kappaHigh=1.0054 theta=CMS_hzz2l2v_pu ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg1_ch1_CMS_hzz2l2v_umet[ kappaLow=1.19323 kappaHigh=1.13948 theta=CMS_hzz2l2v_umet ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg1_ch1_CMS_res_j[ kappaLow=0.652764 kappaHigh=1.17726 theta=CMS_res_j ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg1_ch1_CMS_scale_j[ kappaLow=0.961838 kappaHigh=0.677626 theta=CMS_scale_j ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg1_ch1_zll_CMS_hzz2l2v_stat_ll_zll_8TeV[ kappaLow=0.025872 kappaHigh=1.38942 theta=zll_CMS_hzz2l2v_stat_ll_zll_8TeV ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg2_ch1_topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV[ kappaLow=0.690817 kappaHigh=1.18533 theta=topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_eff_b[ kappaLow=0.998041 kappaHigh=1.00239 theta=CMS_eff_b ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_les[ kappaLow=0.968416 kappaHigh=1.01616 theta=CMS_hzz2l2v_les ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_pu[ kappaLow=1.00492 kappaHigh=0.994978 theta=CMS_hzz2l2v_pu ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_hzz2l2v_umet[ kappaLow=0.961426 kappaHigh=1.02466 theta=CMS_hzz2l2v_umet ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_res_j[ kappaLow=1.00701 kappaHigh=0.988459 theta=CMS_res_j ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg3_ch1_CMS_scale_j[ kappaLow=1.06762 kappaHigh=0.890808 theta=CMS_scale_j ] = 1
+AsymPow::systeff_ch1_WV_semileptonic_bkg3_ch1_wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV[ kappaLow=0.978398 kappaHigh=1.02069 theta=wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV ] = 1
+RooProduct::topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_scaled_ch1_WV_semileptonic_bkg2_ch1[ 0.33 * topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV ] = 0
+RooProduct::wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_scaled_ch1_WV_semileptonic_bkg3_ch1[ 0.33 * wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV ] = 0
+RooProduct::zll_CMS_hzz2l2v_stat_ll_zll_8TeV_scaled_ch1_WV_semileptonic_bkg1_ch1[ 0.33 * zll_CMS_hzz2l2v_stat_ll_zll_8TeV ] = 0
+RooProduct::zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_scaled_ch1_WWgammaZ_WV_atgc_semileptonic_ch1[ 0.33 * zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto ] = 0
+RooProduct::zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_scaled_ch1_WWgammaZ_WV_atgc_semileptonic_ch1[ 0.33 * zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV ] = 0
+
+datasets
+--------
+RooDataHist::data_obs(CMS_channel,W_pt_ch1)
+RooDataHist::DHIST_SM_wv_semil_ch1_shape_for_scale(W_pt_ch1)
+
+named sets
+----------
+ModelConfig_GlobalObservables:(CMS_eff_b_In,CMS_eff_c_In,CMS_hzz2l2v_les_In,CMS_hzz2l2v_pu_In,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_In,CMS_hzz2l2v_umet_In,CMS_res_j_In,CMS_scale_j_In,QCDJeT_aTG_In,QCDscale_VV_In,lumi_8TeV_In,pdf_VV_In,twwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_In,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_In,zll_CMS_hzz2l2v_stat_ll_zll_8TeV_In,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_In,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_In)
+ModelConfig_NuisParams:(CMS_eff_b,CMS_eff_c,CMS_hzz2l2v_les,CMS_hzz2l2v_pu,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c,CMS_hzz2l2v_umet,CMS_res_j,CMS_scale_j,QCDJeT_aTG,QCDscale_VV,lumi_8TeV,pdf_VV,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetata_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV)
+ModelConfig_Observables:(W_pt_ch1,CMS_channel)
+ModelConfig_POI:(dkg,dg1,lZ)
+ModelConfig_bonly_GlobalObservables:(CMS_eff_b_In,CMS_eff_c_In,CMS_hzz2l2v_les_In,CMS_hzz2l2v_pu_In,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_In,CMS_hzz2l2v_umet_In,CMS_res_j_In,CMS_scale_j_In,QCDJeT_aTG_In,QCDscale_VV_In,lumi_8TeV_In,pdf_VIn,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_In,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_In,zll_CMS_hzz2l2v_stat_ll_zll_8TeV_In,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_In,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_In)
+ModelConfig_bonly_NuisParams:(CMS_eff_b,CMS_eff_c,CMS_hzz2l2v_les,CMS_hzz2l2v_pu,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c,CMS_hzz2l2v_umet,CMS_res_j,CMS_scale_j,QCDJeT_aTG,QCDscale_VV,lumi_8TeV,pdf_VV,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwjetsdata_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV)
+ModelConfig_bonly_Observables:(W_pt_ch1,CMS_channel)
+ModelConfig_bonly_POI:(dkg,dg1,lZ)
+POI:(dkg,dg1,lZ)
+globalObservables:(CMS_eff_b_In,CMS_eff_c_In,CMS_hzz2l2v_les_In,CMS_hzz2l2v_pu_In,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c_In,CMS_hzz2l2v_umet_In,CMS_res_j_In,CMS_scale_j_In,QCDJeT_aTG_In,QCDscale_VV_In,lumi_8TeV_In,pdf_VV_In,topwwwjetsdatCMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_In,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_In,zll_CMS_hzz2l2v_stat_ll_zll_8TeV_In,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto_In,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV_In)
+nuisances:(CMS_eff_b,CMS_eff_c,CMS_hzz2l2v_les,CMS_hzz2l2v_pu,CMS_hzz2l2v_sys_topwwwjetsdata_8TeV_c,CMS_hzz2l2v_umet,CMS_res_j,CMS_scale_j,QCDJeT_aTG,QCDscale_VV,lumi_8TeV,pdf_VV,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV,wznu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,zz2l2nu_CMS_hzz2l2v_QCD_ACC_JVeto,zz2l2nu_CMS_hzz2l2v_stat_ll_zz2l2nu_8TeV)
+observables:(W_pt_ch1,CMS_channel)
+
+generic objects
+---------------
+TH1D::SM_wv_semil_ch1_shape_for_scale
+RooStats::ModelConfig::ModelConfig
+RooStats::ModelConfig::ModelConfig_bonly
+RooArgSet::discreteParams
